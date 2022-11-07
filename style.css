@@ -1,0 +1,25 @@
+html,
+body,
+* {
+    font-family: 'Mali', cursive;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 80%;
+    border-radius: 30px;
+}
+
+.box {
+    font-size: 30px;
+    display: flex;
+    width: 90vw;
+    flex-direction: row;
+}
+
+.card {
+    border: 1px solid rgb(245, 144, 208);
+    background-color: rgb(245, 220, 237);
+    box-shadow: 10px 5px 5px rgb(242, 218, 162);
+    top: ;
+    padding: 15;
+    margin: 20;
+}
