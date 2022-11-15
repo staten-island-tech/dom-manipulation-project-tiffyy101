@@ -8,3 +8,8 @@
     color: rgb(38, 6, 6);
     text-align: center;
 }
+
+.label {
+    display: block;
+    font: 'Mali', cursive;
+}
