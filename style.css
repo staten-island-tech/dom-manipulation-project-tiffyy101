@@ -1,15 +1,29 @@
-.body {
+body,
+html,
+* {
     font-family: 'Mali', cursive;
+    font-size: 20px;
+    border-radius: 30px;
+    text-align: center;
+
 }
 
-#pink-box {
+.background {
     background-color: rgb(245, 220, 237);
-    font-size: 20px;
+}
+
+.yellow-box {
+    background-color: rgb(231, 200, 159);
+    box-shadow: 10px 5px 5px rgb(111, 34, 3);
     color: rgb(38, 6, 6);
     text-align: center;
 }
 
 .label {
     display: block;
-    font: 'Mali', cursive;
+}
+
+.button {
+    width: 13vh;
+    height: 3vh;
 }
