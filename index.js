@@ -1,12 +1,7 @@
-const DOMSelctors = {
-    button: document.getElementById("btn"),
+const DOMSelectors = {
+    button: document.getElementById("button"),
     box: document.getElementById("pink-box"),
-    input: document.querySelector('#input'),
+    input: document.getElementById("fruit"),
+    list: document.querySelectorAll(".list")
 };
 
-DOMSelectors.box.addEventListener("click", function () {
-    let input = DOMSelectors.input.value;
-    console.log(input);
-    DOMSelectors.box.insertAdjacentHTML("beforebegin", '<h1>Favorite');
-    DOMSelectors.input.value = "";
-});
