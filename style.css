@@ -1,7 +1,7 @@
 html,
 body,
 * {
-  background-color: rgb(250, 207, 152);
+    background-color: rgb(250, 207, 152);
     font-family: 'Mali', cursive;
     text-align: center;
     box-sizing: border-box;
@@ -9,6 +9,7 @@ body,
     border-radius: 30px;
     font-size: 20px;
 }
+
 .h1 {
     padding: 20;
     margin: 20;

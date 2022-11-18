@@ -1,6 +1,6 @@
 const DOMSelectors = {
+    form: document.getElementById("form"),
     box: document.getElementById("box"),
-    text: document.getElementById("text"),
     button: document.getElementById("btn"),
     fruit: document.getElementById("fruit"),
     iceCream: document.getElementById("iceCream"),
@@ -10,8 +10,9 @@ const DOMSelectors = {
 console.log(DOMSelectors);
 
 function background(background){
-    background.style.backgroundColor = "red";
-    text.innerHTML = "it is now a diff color";
+    background.style.backgroundColor = "lightblue";
 }
 
-background(DOMSelectors.text);
+DOMSelectors.form.addEventListener("submit", function(submit){
+    background(DOMSelectors.button),
+})
