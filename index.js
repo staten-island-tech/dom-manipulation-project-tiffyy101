@@ -6,8 +6,9 @@ const DOMSelectors = {
   flavor: document.getElementById("flavor"),
   topping1: document.getElementById("topping1"),
   topping2: document.getElementById("topping2"),
-  url: document.getElementById("url"),
+  choice: document.getElementById("choice"),
   display: document.getElementById("display"),
+  clear: document.querySelector("clear"),
 };
 console.log(DOMSelectors);
 
@@ -16,7 +17,7 @@ DOMSelectors.form.addEventListener("submit", function (e) {
   let flavor = DOMSelectors.flavor.value;
   let topping1 = DOMSelectors.topping1.value;
   let topping2 = DOMSelectors.topping2.value;
-  let url = DOMSelectors.url.value;
+  let choice = DOMSelectors.choice.value;
   console.log(DOMSelectors);
   creation();
   clear();
@@ -25,7 +26,7 @@ DOMSelectors.form.addEventListener("submit", function (e) {
       `afterend`,
       `<div class="iceCreamMaker">
       <h2>You have created a ${flavor} ice cream with ${topping1} and ${topping2}!</h2>
-      <h3>${url}</h3>
+      <h3>${choice}</h3>
        <button class="clear">Clear</button>
   </div>`
     );
@@ -34,3 +35,7 @@ DOMSelectors.form.addEventListener("submit", function (e) {
     DOMSelectors.topping2.value = "";
   }
 })
+
+function clear() {
+  document.getElementById('form').reset();
+}

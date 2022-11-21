@@ -35,3 +35,7 @@ body,
     height: 6vh;
     background-color: beige;
 }
+
+.clear {
+    background-color: rgb(208, 229, 236);
+}
