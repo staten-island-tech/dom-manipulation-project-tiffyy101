@@ -7,8 +7,7 @@ const DOMSelectors = {
   topping1: document.getElementById("topping1"),
   topping2: document.getElementById("topping2"),
   choice: document.getElementById("choice"),
-  display: document.getElementById("display"),
-  clear: document.querySelector("clear"),
+  display: document.getElementById("display")
 };
 console.log(DOMSelectors);
 
@@ -20,14 +19,13 @@ DOMSelectors.form.addEventListener("submit", function (e) {
   let choice = DOMSelectors.choice.value;
   console.log(DOMSelectors);
   creation();
-  clear();
+  remove();
   function creation() {
     DOMSelectors.button.insertAdjacentHTML(
       `afterend`,
       `<div class="iceCreamMaker">
-      <h2>You have created a ${flavor} ice cream with ${topping1} and ${topping2}!</h2>
-      <h3>${choice}</h3>
-       <button class="clear">Clear</button>
+      <h2>You have created a ${flavor} ice cream with ${topping1} and ${topping2} in a nice ${choice}!</h2>
+      <button class="remove">Clear</button>
   </div>`
     );
     DOMSelectors.flavor.value = "";
@@ -36,6 +34,12 @@ DOMSelectors.form.addEventListener("submit", function (e) {
   }
 })
 
-function clear() {
+function remove() {
+  let remove = document.querySelectorAll(".remove");
+  remove.forEach((el) => {
+    el.addEventListener("click", function (el) {
+      this.parentElement.remove();
   document.getElementById('form').reset();
+    });
+  });
 }
