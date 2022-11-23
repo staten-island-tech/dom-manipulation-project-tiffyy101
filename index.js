@@ -31,6 +31,7 @@ DOMSelectors.form.addEventListener("submit", function (e) {
     DOMSelectors.flavor.value = "";
     DOMSelectors.topping1.value = "";
     DOMSelectors.topping2.value = "";
+    document.getElementById('form').reset();
   }
 })
 
@@ -39,7 +40,6 @@ function remove() {
   remove.forEach((el) => {
     el.addEventListener("click", function (el) {
       this.parentElement.remove();
-  document.getElementById('form').reset();
     });
   });
 }
