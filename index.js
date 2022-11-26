@@ -7,7 +7,8 @@ const DOMSelectors = {
   topping1: document.getElementById("topping1"),
   topping2: document.getElementById("topping2"),
   choice: document.getElementById("choice"),
-  display: document.getElementById("display")
+  display: document.getElementById("display"),
+  clear: document.querySelectorAll(".remove")
 };
 console.log(DOMSelectors);
 
@@ -19,7 +20,7 @@ DOMSelectors.form.addEventListener("submit", function (e) {
   let choice = DOMSelectors.choice.value;
   console.log(DOMSelectors);
   creation();
-  remove();
+  clear();
   function creation() {
     DOMSelectors.button.insertAdjacentHTML(
       `afterend`,
@@ -33,13 +34,12 @@ DOMSelectors.form.addEventListener("submit", function (e) {
     DOMSelectors.topping2.value = "";
     document.getElementById('form').reset();
   }
-})
-
-function remove() {
-  let remove = document.querySelectorAll(".remove");
-  remove.forEach((el) => {
+  function clear() {
+  let clear = document.querySelectorAll(".remove");
+  clear.forEach((el) => {
     el.addEventListener("click", function (el) {
       this.parentElement.remove();
     });
   });
 }
+})
