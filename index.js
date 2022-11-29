@@ -20,7 +20,9 @@ DOMSelectors.form.addEventListener("submit", function (e) {
   let choice = DOMSelectors.choice.value;
   console.log(DOMSelectors);
   creation();
+  reset();
   clear();
+
   function creation() {
     DOMSelectors.button.insertAdjacentHTML(
       `afterend`,
@@ -29,11 +31,15 @@ DOMSelectors.form.addEventListener("submit", function (e) {
       <button class="remove">Clear</button>
   </div>`
     );
-    DOMSelectors.flavor.value = "";
-    DOMSelectors.topping1.value = "";
-    DOMSelectors.topping2.value = "";
-    document.getElementById('form').reset();
-  }
+    }
+
+    function reset() {
+       DOMSelectors.flavor.value = "";
+      DOMSelectors.topping1.value = "";
+      DOMSelectors.topping2.value = "";
+      document.getElementById('form').reset();
+    }
+
   function clear() {
   let clear = document.querySelectorAll(".remove");
   clear.forEach((el) => {
